@@ -1085,7 +1085,7 @@ var CAT_CONFIG = {
   document.getElementById('save-proxy-btn').addEventListener('click', function() {
     var url = proxyInput.value.trim().replace(/\/$/, '');
     if (!url) { showToast('Please enter a backend URL'); return; }
-    if (!url.startsWith('http')) url = 'https://' + url;
+    
     PROXY_URL = url;
     try { localStorage.setItem('eventura_proxy', url); } catch(e) {}
     document.getElementById('config-modal').hidden = true;
